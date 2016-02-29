@@ -1,0 +1,76 @@
+#en algunos casos no se reconoce el valor
+x<- NA
+x+1
+y<-c(x,3,5,x)
+mean(y)
+mean (y,na.rm=TRUE)
+##calcula la media sin tener en cuenta los NA
+sqrt(-17)
+sqrt(-17+0i)
+##calcula el resultado y devuelve un numero complejo
+x<-5/0
+##asignamos a x un valor infinito
+exp(-x)
+##decuelve el valor 0
+exp(x)-exp(x)
+## devuelve NaN UNA INDETERMINACIÓN
+
+######Vectores
+v <- numeric() ###almacena en v una estructura vacia de vector númerico
+#character() es un vector de caracteres vacio, y lo mismo ocurre con otros tipos
+v[3] <-17 ##transforma componentes serán 3 NA en un vector de longitud 3 
+v
+##asignaciones
+x <- 3
+##es equivalente a 3-> x y x=3
+x1<- logical(4) ##inicializa un vector de longitud 4 cuyos elemntos son false
+x4<-character(4) ##inicializa un vector de caracteres de longitud 4
+x4
+x<-as.character(x) ##cambiamos a caracter
+nombre<-c("Luis", "María") #vector de caracteres
+edad<-c(23,24)
+varon<-c(TRUE, FALSE); adult <-edad>18
+adult
+edad[2]
+pi:1
+seq(0,1,length=10)
+seq(3) #equivale a 1:3 y a la seq(1,3)
+seq(1,5,by=0.5)
+-1:1/0
+rep(1:4,2)
+rep(1:4,c(2,3,1,2))
+rep(1:4,c(2,2))##error tamaños no coinciden
+sequence(c(2.3))
+####Muestras
+x<-c(1:10)
+sample(x,3)
+sample(x) ##permutaciones de los elementos x
+
+##Matrices
+matrix()
+x<- c(1:6)
+dim(x) <- c(2,3)
+dimnames <- list(c("Fila 1", "Fila 1"), c("Col1", "Col2", "Col3"))
+matriz2 <-(matrix(1:12, ncol = 3, byrow = TRUE, dimnames = list (letters [1:4], LETTERS [1:3])))
+matriz2
+matriz2 [1,1]
+matriz2 [,c(2,3)] ##primera entrada corresponde a los renglones, lo que se dice aquí es que solo nos muestre la columna 2 y 3
+#####funciones utiles para trabajar con matrices en R
+#ncol... numero de columnas de x
+#nrow.. numero de filas de x
+#t(x).. transpuesta de x
+#diag(x)... extrae diagonal de matriz o crea una matriz diagonal
+#col(x)... crea una matriz con elemento ij igual al valor j
+#row... crea una matriz con elemento ij igual al valor i
+#cbind... combina secuencias de vectores/ matrices por columnas
+#rbind ... combina secuencias de vectores/ matrices por renglones
+##Ejemplo
+x<- matrix(1:6, 2, 3)
+x
+y <- matrix (1:6,3,2)
+y
+y[3,]; y[3]
+ncol(x); nrow(y)
+t(x)
+cbind(1,x)
+cbind(1:3, 1:6)
